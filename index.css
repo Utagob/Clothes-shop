@@ -1,0 +1,77 @@
+.nav{
+    background-color: gray;
+    height: 100px;
+    padding: 5px; 
+    border-radius: 15px; 
+    border-bottom-right-radius: 100px 50px; 
+    border-top-right-radius: 100px 50px;
+}
+.nav h1{
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+#site_name{
+    float: left; 
+    align-items: center;
+}
+#account{
+    float: right;
+}
+.exmp{
+    background-color: black;
+    border-radius: 30px;
+    margin-top: 5cap;
+    margin-right: 2cap;
+    float: right;
+    padding: 20px;
+    height: 500px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.exmp img{
+    border-radius: 2cap;
+    height: 20cap;
+    width: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; 
+}
+.under{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#i1{
+    position: absolute;
+    top: 13cap;
+    left: 13cap;
+}
+.herobtn{
+    margin-top: 27cap;
+    display: flex;
+    justify-content: center;
+}
+.herobtn h1{
+    background-color: black;
+    color: white;
+    position: relative; /* Add position relative so the pseudo element will origin off this with position absolute */
+    height: 100px;
+    width: 325px;
+    background-color: #F66969;
+    border-radius: 25px 25px 25px 0;
+}
+.inverted-border-radius::before {
+  content: "";
+  position: absolute;
+  
+  background-color: #0074D9;
+  bottom: -50px;
+  height: 50px;
+  width: 25px;
+  border-top-left-radius: 25px;
+}
