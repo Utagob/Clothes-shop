@@ -17,10 +17,15 @@
 #account{
     float: right;
 }
-.exmp{
+#part1{
+    margin-top: 7cap;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+#exmp{
     background-color: black;
     border-radius: 30px;
-    margin-top: 5cap;
     margin-right: 2cap;
     float: right;
     padding: 20px;
@@ -32,7 +37,7 @@
     top: 0;
     left: 0;
 }
-.exmp img{
+#exmp img{
     border-radius: 2cap;
     height: 20cap;
     width: auto;
@@ -51,27 +56,26 @@
     top: 13cap;
     left: 13cap;
 }
-.herobtn{
-    margin-top: 27cap;
+#herobtn {
     display: flex;
     justify-content: center;
-}
-.herobtn h1{
-    background-color: black;
+    width: 20cap;
+    height: 8cap;
     color: white;
-    position: relative; /* Add position relative so the pseudo element will origin off this with position absolute */
-    height: 100px;
-    width: 325px;
-    background-color: #F66969;
-    border-radius: 25px 25px 25px 0;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    margin-top: 22cap;
+    margin-left: 23%;
 }
-.inverted-border-radius::before {
-  content: "";
-  position: absolute;
-  
-  background-color: #0074D9;
-  bottom: -50px;
-  height: 50px;
-  width: 25px;
-  border-top-left-radius: 25px;
+#herobtn div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #FFF;
 }
+.top { top: -10px; }
+.bottom { bottom: -10px; }
+.left { left: -10px; }
+.right { right: -10px; }
