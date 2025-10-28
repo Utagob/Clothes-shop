@@ -18,7 +18,7 @@
     float: right;
 }
 #part1{
-    margin-top: 7cap;
+    margin-top: 10cap;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
