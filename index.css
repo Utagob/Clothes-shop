@@ -1,18 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 .nav{
     background-color: gray;
     height: 100px;
     padding: 5px; 
     border-radius: 15px; 
-    border-bottom-right-radius: 100px 50px; 
-    border-top-right-radius: 100px 50px;
+    display: flex;
+    justify-content: space-between;
 }
 .nav h1{
     color: black;
     font-family:'Times New Roman', Times, serif;
 }
-#site_name{
-    float: left; 
+#site_name{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 10cap;
+    padding-left: 3cap;
 }
 #account{
     float: right;
@@ -22,11 +31,11 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    background-color: bisque;
 }
-#exmp{
+#part1 .exmp{
     background-color: black;
-    border-radius: 30px;
-    margin-right: 2cap;
+    border-radius: 30px 0 0 30px;
     float: right;
     padding: 20px;
     height: 500px;
@@ -34,10 +43,11 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    overflow: hidden;
     top: 0;
     left: 0;
 }
-#exmp img{
+.exmp img{
     border-radius: 2cap;
     height: 20cap;
     width: auto;
@@ -56,7 +66,7 @@
     top: 13cap;
     left: 13cap;
 }
-#herobtn {
+#part1 #herobtn {
     display: flex;
     justify-content: center;
     width: 20cap;
@@ -73,9 +83,49 @@
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background-color: #FFF;
+    background-color: bisque;
 }
 .top { top: -10px; }
 .bottom { bottom: -10px; }
 .left { left: -10px; }
 .right { right: -10px; }
+
+#part2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gray;
+}
+#part2 .exmp{
+    background-color: black;
+    border-radius: 0 30px 30px 0;
+    float: right;
+    padding: 20px;
+    height: 500px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+#part2 #herobtn {
+    display: flex;
+    justify-content: center;
+    width: 20cap;
+    height: 8cap;
+    color: white;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    margin-top: 22cap;
+    margin-right: 23%;
+}
+#part2 #herobtn div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: gray;
+}
