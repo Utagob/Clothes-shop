@@ -26,14 +26,13 @@ body{
 #account{
     float: right;
 }
-#part1{
-    margin-top: 10cap;
+#left{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     background-color: bisque;
 }
-#part1 .exmp{
+#left .exmp{
     background-color: black;
     border-radius: 30px 0 0 30px;
     float: right;
@@ -44,7 +43,7 @@ body{
     flex-wrap: wrap;
     position: relative;
     overflow: hidden;
-    justify-content: space-between;
+    justify-content: flex-end;
     top: 0;
     left: 0;
 }
@@ -60,7 +59,7 @@ body{
     top: 0;
     left: 0;
 }
-#part1 #herobtn {
+#left #herobtn {
     display: flex;
     justify-content: center;
     width: 20cap;
@@ -84,13 +83,13 @@ body{
 .left { left: -10px; }
 .right { right: -10px; }
 
-#part2{
+#right{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: gray;
 }
-#part2 .exmp{
+#right .exmp{
     background-color: black;
     border-radius: 0 30px 30px 0;
     float: right;
@@ -104,7 +103,7 @@ body{
     top: 0;
     left: 0;
 }
-#part2 #herobtn {
+#right #herobtn {
     display: flex;
     justify-content: center;
     width: 20cap;
@@ -116,7 +115,7 @@ body{
     margin-top: 22cap;
     margin-right: 23%;
 }
-#part2 #herobtn div {
+#right #herobtn div {
     position: absolute;
     width: 20px;
     height: 20px;
