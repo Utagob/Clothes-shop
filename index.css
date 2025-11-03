@@ -3,16 +3,18 @@ body{
     padding: 0;
 }
 .nav{
-    background-color: gray;
-    height: 100px;
+    background-color: rgb(86, 86, 86);
+    height: 15cap;
     padding: 5px; 
     border-radius: 15px; 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .nav h1{
     color: black;
-    font-family:'Times New Roman', Times, serif;
+    font-family: cursive;
+    font-size: 50px;
 }
 #site_name{ 
     display: flex;
@@ -31,6 +33,7 @@ body{
     flex-direction: row-reverse;
     justify-content: space-between;
     background-color: bisque;
+    align-items: center;
 }
 #left .exmp{
     background-color: black;
@@ -62,21 +65,22 @@ body{
 #left #herobtn {
     display: flex;
     justify-content: center;
-    width: 20cap;
-    height: 8cap;
+    align-items: center;
+    font-size: 20px;
+    width: 30cap;
+    height: 15cap;
     color: white;
     background-color: black;
     position: relative;
     overflow: hidden;
-    margin-top: 22cap;
     margin-left: 23%;
 }
-#herobtn div {
+#left #herobtn div {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    background-color: bisque;
+    background-color: #ffe4c4;
 }
 .top { top: -10px; }
 .bottom { bottom: -10px; }
@@ -87,7 +91,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: gray;
+    align-items: center;
+    background-color: #ffd5a2;
 }
 #right .exmp{
     background-color: black;
@@ -106,28 +111,30 @@ body{
 #right #herobtn {
     display: flex;
     justify-content: center;
-    width: 20cap;
-    height: 8cap;
+    align-items: center;
+    font-size: 20px;
+    width: 30cap;
+    height: 15cap;
     color: white;
     background-color: black;
     position: relative;
     overflow: hidden;
-    margin-top: 22cap;
     margin-right: 23%;
 }
 #right #herobtn div {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
-    background-color: gray;
+    background-color: #ffd5a2;
 }
 #bottom{
+    background-color: rgb(86, 86, 86);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 10cap;
-    margin-bottom: 10cap;
+    padding-top: 10cap;
+    padding-bottom: 10cap;
 } 
 .c{
     display: flex;
@@ -149,5 +156,5 @@ body{
 }
 .q p{
     padding-left: 5px;
-    font-family: cursive;
+    font-family: "Times New Roman";
 }
