@@ -8,7 +8,7 @@ body{
     justify-content: space-between;
     padding-left: 3cap; padding-right: 3cap; 
     padding-top: 1cap; padding-bottom: 1cap;
-    font-size: 30px;
+    font-size: 20px;
 }
 .s{
     display: flex;
@@ -16,25 +16,24 @@ body{
     gap: 20px;
 }
 .header img{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(62, 62, 62);
-    font-size: 20px;
 }
 .nav p{
     margin: 0;
     border-left: 2px solid rgb(115, 115, 115);
-    height: 106px;
+    height: 62px;
 }
 .nav a {
     text-decoration: none;
-    padding: 30px;
-    font-size: 40px;
+    padding: 20px;
+    font-size: 20px;
     color: white;
     width: 50%;
     text-align: center;
