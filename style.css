@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: white;
 }
 header{
     display: flex;
@@ -14,6 +15,10 @@ header{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+header button{
+    border: 0;
+    background-color: transparent;
 }
 header img{
     width: 60px;
