@@ -1,12 +1,19 @@
-function myFunc() {
-    const gf = document.body;
-    if(gf.style.background === "white"){
-        gf.style.background = "#4d4d4d";
-        gf.style.color = "white";
-        console.log("pula");
-    } else {
-        gf.style.background = "white";
-        gf.style.color = "black";
-        console.log("belita");
-    }
-} 
+let darkmode = localStorage.getItem('darkmode')
+const thswitch = document.querySelector('#qwe')
+
+const enableDarkMode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
+}
+
+if (darkmode === "active") enableDarkMode()
+
+thswitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== "active" ? enableDarkMode() : disableDarkMode()
+})

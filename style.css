@@ -1,6 +1,26 @@
+:root{
+    --bg-color: #ffffff;
+    --nav-bg-color: #363636;
+    --text-nav-color: #ffffff;
+    --hover-color: #717171;
+    --text-hover-color: #000000;
+    --text-h-color: #000000;
+    --th-color: #c1c1c1;
+    --th-ic: #000000;
+}
+.darkmode{
+    --bg-color: #141414;
+    --nav-bg-color: #1f1f1f;
+    --text-nav-color: #7b7b7b;
+    --hover-color: #333333;
+    --text-hover-color: #dcdcdc;
+    --text-h-color: #d1d1d1;
+    --th-color: #333333;
+    --th-ic: #dcdcdc;
+}
 body{
     margin: 0;
-    background-color: white;
+    background-color: var(--bg-color);
 }
 header{
     display: flex;
@@ -10,11 +30,38 @@ header{
     padding-left: 3cap; padding-right: 3cap; 
     padding-top: 1cap; padding-bottom: 1cap;
     font-size: 20px;
+    color: var(--text-h-color);
+}
+.r{
+    display: flex;
+    justify-content: center;
 }
 .s{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+#qwe{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--th-color);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#qwe svg{
+    fill: var(--th-ic);
+}
+#qwe svg:last-child{
+    display: none;
+}
+.darkmode #qwe svg:first-child{
+    display: none;
+}
+.darkmode #qwe svg:last-child{
+    display: block;
 }
 header button{
     border: 0;
@@ -28,26 +75,27 @@ header img{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(62, 62, 62);
+    background-color: var(--nav-bg-color);
 }
 .nav p{
     margin: 0;
-    border-left: 2px solid rgb(115, 115, 115);
+    border-left: 2px solid var(--hover-color);
     height: 62px;
 }
 .nav a {
     text-decoration: none;
     padding: 20px;
     font-size: 20px;
-    color: white;
+    color: var(--text-nav-color);
     width: 50%;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.5s;
+    transition: background-color 0.3s;
+    transition: color 0.5s;
 }
 .nav a:hover {
-    background-color: rgb(120, 120, 120);
-    color: black;
+    background-color: var(--hover-color);
+    color: var(--text-hover-color);
 }
 .show{
     display: flex;
@@ -85,4 +133,7 @@ header img{
     width: 350px;
     height: auto;
     box-shadow: 5px 5px 4px gray ;   
+}
+.pr{
+    color: var(--text-h-color);
 }
