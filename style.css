@@ -51,18 +51,10 @@ header{
     align-items: center;
     justify-content: center;
 }
-#qwe svg{
-    fill: var(--th-ic);
-}
-#qwe svg:last-child{
-    display: none;
-}
-.darkmode #qwe svg:first-child{
-    display: none;
-}
-.darkmode #qwe svg:last-child{
-    display: block;
-}
+#qwe svg{fill: var(--th-ic);}
+#qwe svg:last-child{display: none;}
+.darkmode #qwe svg:first-child{display: none;}
+.darkmode #qwe svg:last-child{display: block;}
 header button{
     border: 0;
     background-color: transparent;
@@ -71,6 +63,14 @@ header img{
     width: 60px;
     height: 60px;
 }
+#icon{background: transparent;}
+.darkmode #icon svg{fill: #ffffff;}
+#iN{display: none;}
+.darkmode #iS{display: none;}
+.darkmode #iN{display: block;}
+#acN{display: none;}
+.darkmode #acS{display: none;}
+.darkmode #acN{display: block;}
 .nav{
     display: flex;
     align-items: center;
