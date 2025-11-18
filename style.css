@@ -89,7 +89,6 @@ header img{
     color: var(--text-nav-color);
     width: 50%;
     text-align: center;
-    text-decoration: none;
     transition: background-color 0.3s;
     transition: color 0.5s;
 }
@@ -136,4 +135,57 @@ header img{
 }
 .pr{
     color: var(--text-h-color);
+}
+#lgo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lgo img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+#lgo button{
+    height: 35px;
+    width: 35px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+#ic button:hover{
+    background-color: var(--hover-color);
+}
+#paym{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#paym img{
+    width: 40px;
+    height: 35px;
+}
+#paym button{
+    border: none;
+    background: transparent;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+#ic{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ic p{
+    margin: 0;
+    border-left: 2px solid var(--hover-color);
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 2px;
 }
