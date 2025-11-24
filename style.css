@@ -1,9 +1,9 @@
 :root{
     --bg-color: #ffffff;
-    --nav-bg-color: #363636;
-    --text-nav-color: #ffffff;
-    --hover-color: #717171;
-    --text-hover-color: #000000;
+    --nav-bg-color: #d5d5d5;
+    --text-nav-color: #252525;
+    --hover-color: #707070;
+    --text-hover-color: #ffffff;
     --text-h-color: #000000;
     --th-color: #c1c1c1;
     --th-ic: #000000;
@@ -11,9 +11,9 @@
 .darkmode{
     --bg-color: #141414;
     --nav-bg-color: #1f1f1f;
-    --text-nav-color: #7b7b7b;
-    --hover-color: #333333;
-    --text-hover-color: #dcdcdc;
+    --text-nav-color: #d7d7d7;
+    --hover-color: #6e6e6e;
+    --text-hover-color: #040404;
     --text-h-color: #d1d1d1;
     --th-color: #333333;
     --th-ic: #dcdcdc;
@@ -35,13 +35,14 @@ header{
 .r{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .s{
     display: flex;
     align-items: center;
     gap: 20px;
 }
-#qwe{
+#dark-ch{
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -51,10 +52,10 @@ header{
     align-items: center;
     justify-content: center;
 }
-#qwe svg{fill: var(--th-ic);}
-#qwe svg:last-child{display: none;}
-.darkmode #qwe svg:first-child{display: none;}
-.darkmode #qwe svg:last-child{display: block;}
+#dark-ch svg{fill: var(--th-ic);}
+#dark-ch svg:last-child{display: none;}
+.darkmode #dark-ch svg:first-child{display: none;}
+.darkmode #dark-ch svg:last-child{display: block;}
 header button{
     border: 0;
     background-color: transparent;
@@ -129,12 +130,48 @@ header img{
     font-size: 20px;
 }
 .prod img{
-    width: 350px;
+    width: 200px;
     height: auto;
     box-shadow: 5px 5px 4px gray ;   
 }
 .pr{
     color: var(--text-h-color);
+}
+.footer{
+    display: flex;
+}
+.footer div{
+    flex-grow: 1;
+    text-align: center;
+}
+#ic{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ic p{
+    margin: 0;
+    border-left: 2px solid var(--hover-color);
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 2px;
+}
+#ic button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+#ic button:hover{
+    width: 60px;
+    border-radius: 30%;
+    box-shadow: 2px 2px 1px gray;
 }
 #lgo{
     display: flex;
@@ -155,10 +192,6 @@ header img{
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
-    border-radius: 50%;
-}
-#ic button:hover{
-    background-color: var(--hover-color);
 }
 #paym{
     display: flex;
@@ -173,19 +206,18 @@ header img{
     border: none;
     background: transparent;
     transition: background-color 0.3s;
-    border-radius: 50%;
 }
-#ic{
-    padding-top: 30px;
+.qa{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-h-color);
+}
+.title-d{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-#ic p{
-    margin: 0;
-    border-left: 2px solid var(--hover-color);
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 5px;
-    width: 2px;
+    color: var(--text-h-color);
 }

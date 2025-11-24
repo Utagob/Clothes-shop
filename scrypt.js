@@ -1,5 +1,5 @@
 let darkmode = localStorage.getItem('darkmode')
-const thswitch = document.querySelector('#qwe')
+const thswitch = document.querySelector('#dark-ch')
 
 const enableDarkMode = () => {
     document.body.classList.add('darkmode')
