@@ -32,6 +32,9 @@ header{
     font-size: 20px;
     color: var(--text-h-color);
 }
+header button:hover{
+    cursor: pointer;
+}
 .r{
     display: flex;
     justify-content: center;
@@ -96,6 +99,7 @@ header img{
 .nav a:hover {
     background-color: var(--hover-color);
     color: var(--text-hover-color);
+    cursor: pointer;
 }
 .show{
     display: flex;
@@ -172,6 +176,7 @@ header img{
     width: 60px;
     border-radius: 30%;
     box-shadow: 2px 2px 1px gray;
+    cursor: pointer;
 }
 #lgo{
     display: flex;
@@ -191,7 +196,7 @@ header img{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s;
+    cursor: pointer;
 }
 #paym{
     display: flex;
@@ -205,7 +210,6 @@ header img{
 #paym button{
     border: none;
     background: transparent;
-    transition: background-color 0.3s;
 }
 .qa{
     display: flex;
