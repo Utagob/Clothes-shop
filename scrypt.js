@@ -17,3 +17,11 @@ thswitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode')
     darkmode !== "active" ? enableDarkMode() : disableDarkMode()
 })
+
+const button = document.getElementById("cb");
+
+function consB(){
+    console.log("No share :(");
+}
+
+button.addEventListener("click", consB);
