@@ -1,12 +1,12 @@
-:root{
-    --bg-color: #ffffff;
-    --nav-bg-color: #d5d5d5;
-    --text-nav-color: #252525;
-    --hover-color: #707070;
-    --text-hover-color: #ffffff;
-    --text-h-color: #000000;
-    --th-color: #c1c1c1;
-    --th-ic: #000000;
+.darkmode{  
+    --bg-color: #141414;
+    --nav-bg-color: #1f1f1f;
+    --text-nav-color: #d7d7d7;
+    --hover-color: #6e6e6e;
+    --text-hover-color: #040404;
+    --text-h-color: #d1d1d1;
+    --th-color: #333333;
+    --th-ic: #dcdcdc;
 }
 body{
     margin: 0;
@@ -54,8 +54,8 @@ header button:hover{
     align-items: center;
     justify-content: center;
 }
-#dark-ch svg{fill: var(--th-ic);}
-#dark-ch svg:last-child{display: none;}
+#dark-ch svg:first-child{display: none;}
+#dark-ch svg:last-child{display: block;}
 header button{
     border: 0;
     background-color: transparent;
@@ -65,8 +65,11 @@ header img{
     height: 60px;
 }
 #icon{background: transparent;}
-#iN{display: none;}
-#acN{display: none;}
+#icon svg{fill: #ffffff;}
+#iS{display: none;}
+#iN{display: block;}
+#acS{display: none;}
+#acN{display: block;}
 .nav{
     display: flex;
     align-items: center;
