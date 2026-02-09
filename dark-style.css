@@ -1,4 +1,4 @@
-.darkmode{  
+:root{  
     --bg-color: #141414;
     --nav-bg-color: #1f1f1f;
     --text-nav-color: #d7d7d7;
@@ -54,8 +54,8 @@ header button:hover{
     align-items: center;
     justify-content: center;
 }
-#dark-ch svg:first-child{display: none;}
-#dark-ch svg:last-child{display: block;}
+svg:first-child{display: none;}
+svg:last-child{display: block;}
 header button{
     border: 0;
     background-color: transparent;
