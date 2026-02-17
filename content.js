@@ -104,13 +104,7 @@ const i3 = document.createElement("img");
 b1.appendChild(i3);
 
 const b2 = document.createElement("button");
-    b2.setAttribute("id", "acN");
-const i4 = document.createElement("img");
-    i4.setAttribute("src", content.headImage[3]);
-b2.appendChild(i4);
-
-const b3 = document.createElement("button");
-    b3.setAttribute("id", "dark-ch");
+    b2.setAttribute("id", "dark-ch");
 const SVG_NS = "http://www.w3.org/2000/svg";
 function createIcon(pathData) {
     const svg = document.createElementNS(SVG_NS, "svg");
@@ -129,11 +123,10 @@ function createIcon(pathData) {
 const svg1 = createIcon(content.headImage[4]);
 const svg2 = createIcon(content.headImage[5]);
 
-b3.appendChild(svg1);
-b3.appendChild(svg2);
+b2.appendChild(svg1);
+b2.appendChild(svg2);
 r.appendChild(b1);
 r.appendChild(b2);
-r.appendChild(b3);
 head.appendChild(s);
 head.appendChild(r);
 body.appendChild(head);
