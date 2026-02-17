@@ -63,8 +63,21 @@ const content = {
           <p>Classic Shoes</p>
           <img src="image/exm/csh.png">
         </div>`
+    ],
+    socialImg:[
+        "image/social-m/faceb.png",
+        "image/social-m/inst.png",
+    ],
+    paymImg:[
+        "image/paym/MasterCard.png",
+        "image/paym/visa.png",
+        "image/paym/payP.png"
+    ],
+    footer:[
+        "Home",
+        "About us",
+        "Terms and conditions"
     ]
-
 }
 
 const s = document.createElement('div');
@@ -171,6 +184,45 @@ for(let i=0; i<content.showL.length; i++){
     sec.innerHTML = content.showL[i];
     pr.appendChild(sec);
 }
-
-
 body.appendChild(pr);
+
+const footer = document.createElement('footer');
+const ic = document.createElement('div');
+ic.id = "ic";
+const lgo = document.createElement('div');
+lgo.id = "lgo";
+for(let i=0; i<content.socialImg.length; i++){
+    const btn = document.createElement('button');
+    const img = document.createElement('img');
+    img.setAttribute("src", content.socialImg[i]);
+    btn.appendChild(img);
+    lgo.appendChild(btn);
+}
+const paym = document.createElement('div');
+paym.id = "paym";
+for(let i=0; i<content.paymImg.length; i++){
+    const btn = document.createElement('button');
+    const img = document.createElement('img');
+    img.setAttribute("src", content.paymImg[i]);
+    btn.appendChild(img);
+    paym.appendChild(btn);
+}
+ic.appendChild(lgo);
+ic.appendChild(p);
+ic.appendChild(paym);
+footer.appendChild(ic);
+const qa = document.createElement('div');
+qa.className = "qa";
+for(let i=0; i<content.paymImg.length; i++){
+    const pz = document.createElement('p');
+    pz.innerText = content.footer[i];
+    qa.appendChild(pz);
+}
+footer.appendChild(qa);
+const td = document.createElement('div');
+td.className = "title-d";
+const px = document.createElement('p');
+px.innerText = "©Copyright by Phorema";
+td.appendChild(px);
+footer.appendChild(td);
+body.appendChild(footer);
