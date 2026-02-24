@@ -1,27 +1,25 @@
-let darkmode = localStorage.getItem('darkmode')
-const thswitch = document.querySelector('#dark-ch')
-
-const enableDarkMode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
+const theme = document.getElementById("theme");
+function changeTheme(){
+    if(theme.getAttribute("href") === "style.css"){
+        theme.setAttribute("href","dark-style.css");
+        b1.id = "acN";
+        i3.setAttribute("src", content.headImage[3]);
+    } else {
+        theme.setAttribute("href", "style.css");
+        b1.id = "acS";
+        i3.setAttribute("src", content.headImage[2]);
+    }
+    return 0;
 }
 
-const disableDarkMode = () => {
-    document.body.classList.remove('darkmode')
-    localStorage.setItem('darkmode', null)
-}
-
-if (darkmode === "active") enableDarkMode()
-
-thswitch.addEventListener("click", () => {
-    darkmode = localStorage.getItem('darkmode')
-    darkmode !== "active" ? enableDarkMode() : disableDarkMode()
-})
+const chBtn = document.getElementById("dark-ch");
+chBtn.addEventListener("click", changeTheme);
 
 const button = document.getElementById("cb");
 
 function consB(){
     console.log("No share :(");
+    return 0;
 }
 
 button.addEventListener("click", consB);
