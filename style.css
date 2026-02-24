@@ -13,7 +13,6 @@ body{
     margin: 0;
     background-color: var(--bg-color);
 }
-
 #alertUserName{
     display: flex;
     background-color: var(--bg-color);
@@ -33,6 +32,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--text-nav-color);
 }
 #userNameIn{
     width: 150px;
@@ -55,9 +55,7 @@ body{
 }
 header{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     padding-left: 3cap; padding-right: 3cap; 
     padding-top: 1cap; padding-bottom: 1cap;
     font-size: 20px;
@@ -65,6 +63,18 @@ header{
 }
 header button:hover{
     cursor: pointer;
+}
+#headClone{
+    scale: 0.7;
+}
+#upHead{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.userName{
+    text-align: center;
 }
 .r{
     display: flex;
