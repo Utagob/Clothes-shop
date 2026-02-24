@@ -123,6 +123,10 @@ function createIcon(pathData) {
 const svg1 = createIcon(content.headImage[4]);
 const svg2 = createIcon(content.headImage[5]);
 
+
+
+
+
 b2.appendChild(svg1);
 b2.appendChild(svg2);
 r.appendChild(b1);
@@ -130,6 +134,35 @@ r.appendChild(b2);
 head.appendChild(s);
 head.appendChild(r);
 body.appendChild(head);
+
+const pUser = document.createElement("p");
+pUser.setAttribute("id", "userName");
+pUser.innerHTML = "";
+head.appendChild(pUser);
+
+const headClone = head.cloneNode(true);
+
+const alertSection = document.createElement("div");
+alertSection.setAttribute("id", "alertUserName");
+body.appendChild(alertSection);
+const alertText = document.createElement("div");
+alertText.setAttribute("id", "alertText");
+alertSection.appendChild(alertText);
+let n = 0;
+while(n === 0){
+    const h1User = document.createElement("h1");
+    h1User.innerHTML = "Add your name:";
+    alertText.appendChild(h1User);
+    const inputUser = document.createElement("input");
+    inputUser.setAttribute("type", "text");
+    inputUser.setAttribute("id", "userNameIn");
+    alertText.appendChild(inputUser);
+    inputUser.addEventListener("input", (event) => {
+        p.innerHTML= "Hello " + event.target.value;
+    });
+    n = 1;
+}
+alertSection.appendChild(headClone);
 
 const div1 = document.createElement('div');
 div1.setAttribute("class", "nav");

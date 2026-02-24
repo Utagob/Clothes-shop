@@ -8,9 +8,41 @@
     --th-color: #c1c1c1;
     --th-ic: #000000;
 }
+
 body{
     margin: 0;
     background-color: var(--bg-color);
+}
+
+#alertUserName{
+    display: flex;
+    background-color: var(--bg-color);
+    width: 500px;
+    height: 300px;
+    padding: 5px;
+    position: fixed;
+    right: 40%;
+    top: 40%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#alertText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#userNameIn{
+    width: 150px;
+    height: 15px;
+    border-radius: 5px;
+}
+#headClone{
+    width: 600px;
+    border: 1px solid black;
+    scale: 0.7;
 }
 #cb{
     position: fixed;
