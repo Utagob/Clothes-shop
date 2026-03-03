@@ -141,7 +141,6 @@ const upHead1 = headClone.childNodes[0];
 const r1 = upHead1.childNodes[1];
 const b = r1.childNodes[0];
 const i4 = b.childNodes[0];
-console.log(i4);
 
 const pUser1 = document.createElement("p");
 pUser1.setAttribute("class", "userName");
@@ -162,10 +161,6 @@ const inputUser = document.createElement("input");
 inputUser.setAttribute("type", "text");
 inputUser.setAttribute("id", "userNameIn");
 alertText.appendChild(inputUser);
-inputUser.addEventListener("input", (event) => {
-    pUser1.innerHTML= "Hello " + event.target.value;
-    pUser2.innerHTML= "Hello " + event.target.value;
-});
 
 headClone.setAttribute("id", "headClone");
 const pUser2 = document.createElement("p");
@@ -174,6 +169,15 @@ pUser2.setAttribute("id", "a1");
 pUser2.innerHTML = "";
 headClone.appendChild(pUser2);
 alertSection.appendChild(headClone);
+
+const User = localStorage.getItem("User");
+if(User === " " || User === null){
+    inputUser.addEventListener("input", (event) => {
+        pUser1.innerHTML= "Hello " + event.target.value;
+        pUser2.innerHTML= "Hello " + event.target.value;
+        localStorage.setItem("User", event.target.value);
+    });
+}
 
 const div1 = document.createElement('div');
 div1.setAttribute("class", "nav");

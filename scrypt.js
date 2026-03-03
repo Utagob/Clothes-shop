@@ -37,4 +37,14 @@ window.addEventListener("load", ()=> {
             b1.id = "acS";
             i3.setAttribute("src", content.headImage[2]);
         }
+    if(User !== " " || User !== null){
+        body.removeChild(alertSection);
+        pUser1.innerHTML= "Hello " + User;
+        pUser2.innerHTML= "Hello " + User;
+        console.log("User: ", User);
+    } else {
+        alertSection.addEventListener("keypress", (event) => {
+            if(event.keyCode === 13) body.removeChild(alertSection);
+        });
+    } 
 })
