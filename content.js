@@ -219,3 +219,12 @@ px.innerText = "©Copyright by Phorema";
 td.appendChild(px);
 footer.appendChild(td);
 body.appendChild(footer);
+
+
+
+const clothing = {
+    type: "",
+    name: "",
+    imageUrl: ""
+}
+const clothes = [];
