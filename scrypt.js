@@ -5,11 +5,13 @@ function changeTheme(){
         b1.id = "acN";
         i3.setAttribute("src", content.headImage[3]);
         localStorage.setItem("theme", "dark");
+        i4.setAttribute("src", content.headImage[3]);
     } else {
         theme.setAttribute("href", "style.css");
         b1.id = "acS";
         i3.setAttribute("src", content.headImage[2]);
         localStorage.setItem("theme", "light");
+        i4.setAttribute("src", content.headImage[2]);
     }
 }
 
