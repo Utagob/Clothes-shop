@@ -1,16 +1,3 @@
-window.addEventListener("load", ()=> {
-    const themeStored = localStorage.getItem('theme');
-    if(themeStored === 'dark'){
-            theme.setAttribute("href","dark-style.css");
-            b1.id = "acN";
-            i3.setAttribute("src", content.headImage[3]);
-        } else {
-            theme.setAttribute("href", "style.css");
-            b1.id = "acS";
-            i3.setAttribute("src", content.headImage[2]);
-        }
-})
-
 const theme = document.getElementById("theme");
 function changeTheme(){
     if(theme.getAttribute("href") === "style.css"){
@@ -36,3 +23,16 @@ function consB(){
 }
 
 button.addEventListener("click", consB);
+
+window.addEventListener("load", ()=> {
+    const themeStored = localStorage.getItem('theme');
+    if(themeStored === 'dark'){
+            theme.setAttribute("href","dark-style.css");
+            b1.id = "acN";
+            i3.setAttribute("src", content.headImage[3]);
+        } else {
+            theme.setAttribute("href", "style.css");
+            b1.id = "acS";
+            i3.setAttribute("src", content.headImage[2]);
+        }
+})
