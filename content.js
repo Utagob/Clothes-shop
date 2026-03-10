@@ -150,7 +150,6 @@ head.appendChild(pUser1);
 
 const alertSection = document.createElement("div");
 alertSection.setAttribute("id", "alertUserName");
-body.appendChild(alertSection);
 const alertText = document.createElement("div");
 alertText.setAttribute("id", "alertText");
 alertSection.appendChild(alertText);
@@ -160,7 +159,10 @@ alertText.appendChild(h1User);
 const inputUser = document.createElement("input");
 inputUser.setAttribute("type", "text");
 inputUser.setAttribute("id", "userNameIn");
+const submitUser = document.createElement("button");
+submitUser.setAttribute('id', 'submit');
 alertText.appendChild(inputUser);
+alertText.appendChild(submitUser);
 
 headClone.setAttribute("id", "headClone");
 const pUser2 = document.createElement("p");
@@ -169,9 +171,10 @@ pUser2.setAttribute("id", "a1");
 pUser2.innerHTML = "";
 headClone.appendChild(pUser2);
 alertSection.appendChild(headClone);
+body.appendChild(alertSection);
 
 const User = localStorage.getItem("User");
-if(User === " " || User === null){
+if(User !== " " || User !== null){
     inputUser.addEventListener("input", (event) => {
         pUser1.innerHTML= "Hello " + event.target.value;
         pUser2.innerHTML= "Hello " + event.target.value;

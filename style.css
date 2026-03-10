@@ -64,9 +64,6 @@ header{
 header button:hover{
     cursor: pointer;
 }
-#headClone{
-    scale: 0.7;
-}
 #upHead{
     display: flex;
     flex-direction: row;
@@ -269,4 +266,7 @@ header img{
     display: block;
     border-radius: 10px;
     text-align: center;
+}
+#hidden{
+    z-index: -1;
 }
