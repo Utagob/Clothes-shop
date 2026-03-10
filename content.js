@@ -148,33 +148,32 @@ pUser1.setAttribute("id", "a1");
 pUser1.innerHTML = "";
 head.appendChild(pUser1);
 
-const alertSection = document.createElement("div");
-alertSection.setAttribute("id", "alertUserName");
-const alertText = document.createElement("div");
-alertText.setAttribute("id", "alertText");
-alertSection.appendChild(alertText);
-const h1User = document.createElement("h1");
-h1User.innerHTML = "Add your name:";
-alertText.appendChild(h1User);
-const inputUser = document.createElement("input");
-inputUser.setAttribute("type", "text");
-inputUser.setAttribute("id", "userNameIn");
-const submitUser = document.createElement("button");
-submitUser.setAttribute('id', 'submit');
-alertText.appendChild(inputUser);
-alertText.appendChild(submitUser);
+const User = localStorage.getItem('User');
+console.log("User: " + User);
+if(User !== null){
+    pUser1.innerText = "Hello " + User;
+} else {
+    const alertSection = document.createElement("div");
+    alertSection.setAttribute("id", "alertUserName");
+    const alertText = document.createElement("div");
+    alertText.setAttribute("id", "alertText");
+    alertSection.appendChild(alertText);
+    const h1User = document.createElement("h1");
+    h1User.innerHTML = "Add your name:";
+    alertText.appendChild(h1User);
+    const inputUser = document.createElement("input");
+    inputUser.setAttribute("type", "text");
+    inputUser.setAttribute("id", "userNameIn");
+    alertText.appendChild(inputUser);
 
-headClone.setAttribute("id", "headClone");
-const pUser2 = document.createElement("p");
-pUser2.setAttribute("class", "userName");
-pUser2.setAttribute("id", "a1");
-pUser2.innerHTML = "";
-headClone.appendChild(pUser2);
-alertSection.appendChild(headClone);
-body.appendChild(alertSection);
-
-const User = localStorage.getItem("User");
-if(User !== " " || User !== null){
+    headClone.setAttribute("id", "headClone");
+    const pUser2 = document.createElement("p");
+    pUser2.setAttribute("class", "userName");
+    pUser2.setAttribute("id", "a1");
+    pUser2.innerHTML = "";
+    headClone.appendChild(pUser2);
+    alertSection.appendChild(headClone);
+    body.appendChild(alertSection);
     inputUser.addEventListener("input", (event) => {
         pUser1.innerHTML= "Hello " + event.target.value;
         pUser2.innerHTML= "Hello " + event.target.value;

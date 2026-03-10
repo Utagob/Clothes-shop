@@ -38,10 +38,7 @@ window.addEventListener("load", ()=> {
             i3.setAttribute("src", content.headImage[2]);
         }
     const User = localStorage.getItem('User');
-    if(User !== null){
-        body.removeChild(alertSection);
-        pUser1.innerHTML= "Hello " + User;
-    } else {
+    if(User === null){
         const inputUser = document.getElementById('userNameIn');
         const alertSection = document.getElementById('alertUserName');
         inputUser.addEventListener("keypress", (event) => {
