@@ -127,9 +127,57 @@ b2.appendChild(svg1);
 b2.appendChild(svg2);
 r.appendChild(b1);
 r.appendChild(b2);
-head.appendChild(s);
-head.appendChild(r);
+
+const upHead = document.createElement("div");
+upHead.setAttribute("id", "upHead");
+
+upHead.appendChild(s);
+upHead.appendChild(r);
+head.appendChild(upHead);
 body.appendChild(head);
+
+const headClone = head.cloneNode(true);
+const upHead1 = headClone.childNodes[0];
+const r1 = upHead1.childNodes[1];
+const b = r1.childNodes[0];
+const i4 = b.childNodes[0];
+
+const pUser1 = document.createElement("p");
+pUser1.setAttribute("class", "userName");
+pUser1.setAttribute("id", "a1");
+pUser1.innerHTML = "";
+head.appendChild(pUser1);
+
+const alertSection = document.createElement("div");
+alertSection.setAttribute("id", "alertUserName");
+body.appendChild(alertSection);
+const alertText = document.createElement("div");
+alertText.setAttribute("id", "alertText");
+alertSection.appendChild(alertText);
+const h1User = document.createElement("h1");
+h1User.innerHTML = "Add your name:";
+alertText.appendChild(h1User);
+const inputUser = document.createElement("input");
+inputUser.setAttribute("type", "text");
+inputUser.setAttribute("id", "userNameIn");
+alertText.appendChild(inputUser);
+
+headClone.setAttribute("id", "headClone");
+const pUser2 = document.createElement("p");
+pUser2.setAttribute("class", "userName");
+pUser2.setAttribute("id", "a1");
+pUser2.innerHTML = "";
+headClone.appendChild(pUser2);
+alertSection.appendChild(headClone);
+
+const User = localStorage.getItem("User");
+if(User === " " || User === null){
+    inputUser.addEventListener("input", (event) => {
+        pUser1.innerHTML= "Hello " + event.target.value;
+        pUser2.innerHTML= "Hello " + event.target.value;
+        localStorage.setItem("User", event.target.value);
+    });
+}
 
 const div1 = document.createElement('div');
 div1.setAttribute("class", "nav");
