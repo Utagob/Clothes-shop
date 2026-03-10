@@ -149,7 +149,6 @@ pUser1.innerHTML = "";
 head.appendChild(pUser1);
 
 const User = localStorage.getItem('User');
-console.log("User: " + User);
 if(User !== null){
     pUser1.innerText = "Hello " + User;
 } else {
