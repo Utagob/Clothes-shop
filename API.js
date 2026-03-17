@@ -10,7 +10,7 @@ bibleSection.addEventListener('change', (event) => {
         .then(data => {
             console.log(data);
             bibleVerse.innerText = data.text;
-            const bible = document.getElementById('bible');
-            bible.appendChild(bibleVerse);
+            const bible = document.getElementsByClassName('bible');
+            bible[0].appendChild(bibleVerse);
         });
 });
