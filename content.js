@@ -15,6 +15,18 @@ const content = {
         "M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z",
         "M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z",
     ],
+    Api:[
+        "John 16:33",
+        "Colossians 3:14",
+        "Isaiah 41:10",
+        "Isaiah 40:29"
+    ],
+    ApiText:[
+        "Encouragement",
+        "Love",
+        "Strength",
+        "Healing"
+    ],
     mainImage:[
         "image/st.png",
         "image/st1.png",
@@ -136,6 +148,20 @@ upHead.appendChild(r);
 head.appendChild(upHead);
 body.appendChild(head);
 
+//add API
+const ApiBox = document.createElement('div');
+ApiBox.setAttribute('class', 'bible');
+const ApiP = createElement('p');
+ApiP.innerText = 'God is always with us';
+const ApiSelect = createElement('select');
+ApiSelect.setAttribute('id', 'bibleVerse');
+for(var i=0; i<content.Api.length; i++){
+    const ApiOption = createElement('option');
+    ApiOption.setAttribute('value', content.Api[i]);
+    ApiOption.innerText = content.ApiText[i];
+    ApiSelect.appendChild(ApiOption);
+}
+
 const headClone = head.cloneNode(true);
 const upHead1 = headClone.childNodes[0];
 const r1 = upHead1.childNodes[1];
@@ -242,7 +268,7 @@ for(let i=0; i<content.socialImg.length; i++){
 }
 const paym = document.createElement('div');
 paym.id = "paym";
-for(let i=0; i<content.paymImg.length; i++){
+for(let i=0; i<content.footer.length; i++){
     const btn = document.createElement('button');
     const img = document.createElement('img');
     img.setAttribute("src", content.paymImg[i]);
@@ -255,7 +281,7 @@ ic.appendChild(paym);
 footer.appendChild(ic);
 const qa = document.createElement('div');
 qa.className = "qa";
-for(let i=0; i<content.paymImg.length; i++){
+for(let i=0; i<content.footer.length; i++){
     const pz = document.createElement('p');
     pz.innerText = content.footer[i];
     qa.appendChild(pz);
