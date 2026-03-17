@@ -136,18 +136,21 @@ header img{
 .bible{
     align-items: center;
     position: relative;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     margin-right: 25%;
     margin-left: 25%;
     border: 2px solid var(--nav-bg-color);
     font-size: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 #bibleVerse{
     display: none;
 }
 .select-selected {
-  background-color: DodgerBlue;
+  background-color: grey;
 }
 .select-selected:after {
   position: absolute;
@@ -172,7 +175,7 @@ header img{
 }
 .select-items {
   position: absolute;
-  background-color: DodgerBlue;
+  background-color: grey;
   top: 100%;
   left: 0;
   right: 0;

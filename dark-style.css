@@ -138,6 +138,64 @@ header img{
     color: var(--text-hover-color);
     cursor: pointer;
 }
+
+.bible{
+    align-items: center;
+    position: relative;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 25%;
+    margin-left: 25%;
+    border: 2px solid var(--nav-bg-color);
+    font-size: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#bibleVerse{
+    display: none;
+}
+.select-selected {
+  background-color: #e2e2e2;
+}
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--bg-color) transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--bg-color) transparent;
+  top: 7px;
+}
+.select-items div,.select-selected {
+  color: var(--bg-color);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+.select-items {
+  position: absolute;
+  background-color: #e2e2e2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .show{
     display: flex;
 }

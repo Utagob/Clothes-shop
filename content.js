@@ -16,12 +16,14 @@ const content = {
         "M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z",
     ],
     Api:[
+        "",
         "John 16:33",
         "Colossians 3:14",
         "Isaiah 41:10",
         "Isaiah 40:29"
     ],
     ApiText:[
+        "Your Blessing",
         "Encouragement",
         "Love",
         "Strength",
@@ -148,20 +150,6 @@ upHead.appendChild(r);
 head.appendChild(upHead);
 body.appendChild(head);
 
-//add API
-const ApiBox = document.createElement('div');
-ApiBox.setAttribute('class', 'bible');
-const ApiP = createElement('p');
-ApiP.innerText = 'God is always with us';
-const ApiSelect = createElement('select');
-ApiSelect.setAttribute('id', 'bibleVerse');
-for(var i=0; i<content.Api.length; i++){
-    const ApiOption = createElement('option');
-    ApiOption.setAttribute('value', content.Api[i]);
-    ApiOption.innerText = content.ApiText[i];
-    ApiSelect.appendChild(ApiOption);
-}
-
 const headClone = head.cloneNode(true);
 const upHead1 = headClone.childNodes[0];
 const r1 = upHead1.childNodes[1];
@@ -205,6 +193,23 @@ if(User !== null){
         localStorage.setItem("User", event.target.value);
     });
 }
+
+//add API
+const ApiBox = document.createElement('div');
+ApiBox.setAttribute('class', 'bible');
+const ApiP = document.createElement('p');
+ApiP.innerText = 'God is always with us';
+const ApiSelect = document.createElement('select');
+ApiSelect.setAttribute('id', 'bibleVerse');
+for(var i=0; i<content.Api.length; i++){
+    const ApiOption = document.createElement('option');
+    ApiOption.setAttribute('value', content.Api[i]);
+    ApiOption.innerText = content.ApiText[i];
+    ApiSelect.appendChild(ApiOption);
+}
+ApiBox.appendChild(ApiP);
+ApiBox.appendChild(ApiSelect);
+head.appendChild(ApiBox);
 
 const div1 = document.createElement('div');
 div1.setAttribute("class", "nav");
